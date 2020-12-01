@@ -1,0 +1,13 @@
+<Project 
+    DefaultTargets="Test"
+    xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <UsingTask
+    AssemblyFile="packages\xunit.runner.msbuild.2.4.1\build\net452\xunit.runner.msbuild.net452.dll"
+    TaskName="Xunit.Runner.MSBuild.xunit"/>
+
+  <Target Name="Test">
+    <xunit Assemblies="CrossTest\bin\Release\CrossTest.dll" Xml="test_results.xml"/>
+  </Target>
+
+</Project>
